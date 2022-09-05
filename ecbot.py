@@ -16,7 +16,7 @@ import discord
 from discord.ext import commands
 
 # CONFIG
-client = commands.Bot(command_prefix = '.')
+client = commands.Bot(command_prefix = '/')
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 # EVENTS
