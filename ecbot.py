@@ -1,7 +1,7 @@
 ##############################
 # Author: eeysirhc
 # Date written: 2022-08-12
-# Last updated: 2022-09-05
+# Last updated: 2022-09-19
 ##############################
 
 # LOAD PYTHON MODULES
@@ -30,8 +30,8 @@ async def on_ready():
 @client.command()
 async def ec(ctx, id_lookup):
     response = ch.champ(id_lookup)
-    embed = discord.Embed(title = "Rarity Chart")
-    embed.add_field(name = "Results", value=(response), inline=True)
+    embed = discord.Embed(title = "Ergo Champions")
+    embed.add_field(name = "Rarity Chart", value=(response), inline=True)
     await ctx.send(embed=embed)
 
 # EXECUTE
