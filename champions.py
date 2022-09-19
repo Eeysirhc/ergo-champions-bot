@@ -9,11 +9,14 @@ import requests
 import pandas as pd
 import tabulate
 
+pd.set_option('max_colwidth', None)
+
 ranks = pd.read_csv("rarity.csv")
 ranks['Champion: '] = ranks['Champion: '].astype('str')
 
 def champ(id_lookup):
 	df = ranks[ranks['Champion: '] == id_lookup]
-	return(df.to_markdown(tablefmt="grid", index=False))  
+	return(df.to_string())
+	#return(df.to_markdown(tablefmt="grid", index=False))  
 
 
