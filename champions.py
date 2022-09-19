@@ -16,8 +16,8 @@ ranks['Champion: '] = ranks['Champion: '].astype('str')
 
 def champ(id_lookup):
 	df = ranks[ranks['Champion: '] == id_lookup]
-	return(df.squeeze())
-	#return(df.to_markdown(tablefmt="grid", index=False))  
+	df = df.squeeze().to_string()
+	return(df)
 
 
 
