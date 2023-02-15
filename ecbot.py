@@ -1,7 +1,7 @@
 ##############################
 # Author: eeysirhc
 # Date written: 2022-08-12
-# Last updated: 2022-09-19
+# Last updated: 2023-02-15
 ##############################
 
 # LOAD PYTHON MODULES
@@ -16,7 +16,8 @@ import discord
 from discord.ext import commands
 
 # CONFIG
-client = commands.Bot(command_prefix = '.')
+intents = discord.Intents().all()
+client = commands.Bot(command_prefix = '.', intents=intents)
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 # EVENTS
@@ -36,4 +37,3 @@ async def ec(ctx, id_lookup):
 
 # EXECUTE
 client.run(TOKEN)
-
